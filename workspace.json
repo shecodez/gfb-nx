@@ -1,4 +1,12 @@
 {
   "version": 2,
-  "projects": {}
+  "projects": {
+    "insurance-mobile": "apps/insurance-mobile",
+    "insurance-mobile-e2e": "apps/insurance-mobile-e2e",
+    "mobile-auth-feature-login": "libs/mobile/auth/feature-login",
+    "mobile-auth-feature-register": "libs/mobile/auth/feature-register",
+    "mobile-feature-account": "libs/mobile/feature-account",
+    "mobile-feature-home": "libs/mobile/feature-home",
+    "mobile-feature-shell": "libs/mobile/feature-shell"
+  }
 }

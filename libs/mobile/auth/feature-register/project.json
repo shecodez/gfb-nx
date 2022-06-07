@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/mobile/auth/feature-register",
+  "sourceRoot": "libs/mobile/auth/feature-register/src",
+  "prefix": "gfb-nx",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/mobile/auth/feature-register"],
+      "options": {
+        "jestConfig": "libs/mobile/auth/feature-register/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/mobile/auth/feature-register/src/**/*.ts",
+          "libs/mobile/auth/feature-register/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/mobile/feature-home",
+  "sourceRoot": "libs/mobile/feature-home/src",
+  "prefix": "gfb-nx",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/mobile/feature-home"],
+      "options": {
+        "jestConfig": "libs/mobile/feature-home/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/mobile/feature-home/src/**/*.ts",
+          "libs/mobile/feature-home/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

@@ -1,0 +1,7 @@
+{
+  "name": "insurance-mobile",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

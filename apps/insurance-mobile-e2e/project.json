@@ -1,0 +1,28 @@
+{
+  "root": "apps/insurance-mobile-e2e",
+  "sourceRoot": "apps/insurance-mobile-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/insurance-mobile-e2e/cypress.json",
+        "devServerTarget": "insurance-mobile:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "insurance-mobile:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/insurance-mobile-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["insurance-mobile"]
+}
