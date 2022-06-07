@@ -25,7 +25,13 @@
         "libs/mobile/feature-account/src/index.ts"
       ],
       "@gfb-nx/mobile/feature-home": ["libs/mobile/feature-home/src/index.ts"],
-      "@gfb-nx/mobile/feature-shell": ["libs/mobile/feature-shell/src/index.ts"]
+      "@gfb-nx/mobile/feature-policy": [
+        "libs/mobile/feature-policy/src/index.ts"
+      ],
+      "@gfb-nx/mobile/feature-shell": [
+        "libs/mobile/feature-shell/src/index.ts"
+      ],
+      "@gfb-nx/mobile/ui-policies": ["libs/mobile/ui-policies/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

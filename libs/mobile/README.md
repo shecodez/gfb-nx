@@ -2,33 +2,34 @@
 
 ### 📁 mobile/
 
-- 📁 account/
-  - [✔️] ~~feature-view
-  - [❌] ~~feature-edit
-- 📁 auth/
+- ~~📁 account/~~
+  - ~~[✔️] feature-view~~
+  - ~~[❌] feature-edit~~
+- 📁 auth/ 🔓
   - [✔️] feature-login
   - [✔️] feature-register
-- 📁 claim/
+- 📁 claim/ 🔒
   - [❌] feature-create
   - [❌] feature-view-all
   - [❌] feature-view-one
-- 📁 document-library/
-  - 📁 auto-id/
+- 📁 document-library/ 🔒
+  - 📁 auto-id/ 
     - [❌] feature-view-card
     - [❌] feature-view-cards
     - [❌] feature-view-pdf
-  - 📁 declaration/
+  - 📁 declaration/ 
     - [❌] feature-view-all
     - [❌] feature-view-one
-  - 📁 membership/
+  - 📁 membership/ 
     - [❌] feature-view-card
     - [❌] feature-view-pdf
 - 📁 membership/
   - [❌] feature-create
-  - [❌] feature-view
-- 📁 policy/
-  - [❌] feature-view-all
-  - [❌] feature-view-one
+  - [❌] feature-view 🔒
+- 📁 policy/ 🔒
+  - [❌] feature-policy-list 
+  - [❌] feature-policy-details
+- [✔️] feature-account 🔒
 - [🚧] feature-home
 - [❌] feature-layout
 - [✔️] feature-shell

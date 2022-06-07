@@ -1,0 +1,37 @@
+<ion-content>
+  <div>
+    <ion-card>
+      <ion-item>
+        <ion-searchbar
+          animated
+          search-icon
+          (ionInput)="searchPolicies($event)"
+          placeholder="Search policies..."
+          clear-icon
+        >
+        </ion-searchbar>
+      </ion-item>
+    </ion-card>
+
+    <ion-card>
+      <ion-list *ngIf="filteredPolicyList.length else noResults">
+        <ion-item
+          *ngFor="let policy of filteredPolicyList"
+          button
+          (click)="viewPolicy()"
+          detail
+        >
+          <ion-icon slot="start" [name]="getPolicyIcon(policy.type)"></ion-icon>
+          <ion-label>
+            <h5>{{policy.type}}</h5>
+            <h3>{{policy.id}}</h3>
+            <p *ngIf="policy.hasAutoIdCard">View AutoId Card</p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+      <ng-template #noResults>
+        <ion-card-title class="ion-padding">No results.</ion-card-title>
+      </ng-template>
+    </ion-card>
+  </div>
+</ion-content>

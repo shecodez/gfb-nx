@@ -15,7 +15,6 @@ export class LoginPageComponent implements OnInit {
   hidePassword = true;
   passwordInputType = 'password';
 
-  // eslint-disable-next-line @typescript-eslint/no-empty-function
   constructor(private router: Router, private formBuilder: FormBuilder) {}
 
   ngOnInit(): void {

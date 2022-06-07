@@ -7,6 +7,8 @@
     "mobile-auth-feature-register": "libs/mobile/auth/feature-register",
     "mobile-feature-account": "libs/mobile/feature-account",
     "mobile-feature-home": "libs/mobile/feature-home",
-    "mobile-feature-shell": "libs/mobile/feature-shell"
+    "mobile-feature-policy": "libs/mobile/feature-policy",
+    "mobile-feature-shell": "libs/mobile/feature-shell",
+    "mobile-ui-policies": "libs/mobile/ui-policies"
   }
 }

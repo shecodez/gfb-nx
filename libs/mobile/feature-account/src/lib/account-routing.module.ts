@@ -7,7 +7,7 @@ const routes: Routes = [
   {
     path: '',
     component: AccountPageComponent,
-    // TODO: replace login and register with policies and payments page
+    // TODO: replace register with payments page
     children: [
       {
         path: 'policies',
@@ -15,8 +15,8 @@ const routes: Routes = [
           {
             path: '',
             loadChildren: () =>
-              import('@gfb-nx/mobile/auth/feature-login').then(
-                (m) => m.LoginPageComponentModule
+              import('@gfb-nx/mobile/ui-policies').then(
+                (m) => m.PoliciesPageComponentModule
               ),
           },
         ],
