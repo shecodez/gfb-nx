@@ -15,7 +15,7 @@ const routes: Routes = [
           {
             path: '',
             loadChildren: () =>
-              import('@gfb-nx/mobile/ui-policies').then(
+              import('@gfb-nx/mobile/feature-policies').then(
                 (m) => m.PoliciesPageComponentModule
               ),
           },
@@ -27,8 +27,8 @@ const routes: Routes = [
           {
             path: '',
             loadChildren: () =>
-              import('@gfb-nx/mobile/auth/feature-register').then(
-                (m) => m.RegisterPageComponentModule
+              import('@gfb-nx/mobile/feature-invoices').then(
+                (m) => m.InvoicesPageComponentModule
               ),
           },
         ],

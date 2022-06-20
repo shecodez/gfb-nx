@@ -1,14 +1,14 @@
 {
   "projectType": "library",
-  "root": "libs/mobile/ui-policies",
-  "sourceRoot": "libs/mobile/ui-policies/src",
+  "root": "libs/mobile/feature-policies",
+  "sourceRoot": "libs/mobile/feature-policies/src",
   "prefix": "gfb-nx",
   "targets": {
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/mobile/ui-policies"],
+      "outputs": ["coverage/libs/mobile/feature-policies"],
       "options": {
-        "jestConfig": "libs/mobile/ui-policies/jest.config.js",
+        "jestConfig": "libs/mobile/feature-policies/jest.config.js",
         "passWithNoTests": true
       }
     },
@@ -16,8 +16,8 @@
       "executor": "@nrwl/linter:eslint",
       "options": {
         "lintFilePatterns": [
-          "libs/mobile/ui-policies/src/**/*.ts",
-          "libs/mobile/ui-policies/src/**/*.html"
+          "libs/mobile/feature-policies/src/**/*.ts",
+          "libs/mobile/feature-policies/src/**/*.html"
         ]
       }
     }

@@ -1,5 +1,5 @@
 module.exports = {
-  displayName: 'mobile-ui-policies',
+  displayName: 'mobile-feature-invoices',
   preset: '../../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   globals: {
@@ -8,7 +8,7 @@ module.exports = {
       stringifyContentPathRegex: '\\.(html|svg)$',
     },
   },
-  coverageDirectory: '../../../coverage/libs/mobile/ui-policies',
+  coverageDirectory: '../../../coverage/libs/mobile/feature-invoices',
   transform: {
     '^.+\\.(ts|mjs|js|html)$': 'jest-preset-angular',
   },

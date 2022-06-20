@@ -28,6 +28,7 @@ export class PoliciesPageComponent implements OnInit {
       { id: 'DFE_12345673', type: 'home', hasAutoIdCard: false },
       { id: 'LMN_12345674', type: 'farm', hasAutoIdCard: false },
       { id: 'OP_12345675', type: 'auto', hasAutoIdCard: false },
+      { id: '12345679', type: 'broker', hasAutoIdCard: false },
     ];
     this.filteredPolicyList = this.policyList;
   }
