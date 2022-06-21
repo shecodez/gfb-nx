@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { map } from 'rxjs';
 
 // TODO: move this to correct place
 export type InvoiceListItem = {
@@ -19,6 +20,10 @@ export class InvoicesPageComponent implements OnInit {
   loading = false;
   error = {};
   invoiceList = [] as InvoiceListItem[];
+  totalInvoices = 1;
+
+  currentPage = 1;
+  itemsPerPage = 3;
 
   // eslint-disable-next-line @typescript-eslint/no-empty-function
   constructor() {}
@@ -34,10 +39,10 @@ export class InvoicesPageComponent implements OnInit {
       },
       {
         id: '2',
-        dueDate: '6/18/2022',
-        balanceDue: 8300,
-        accountId: 'ACC50012342',
-        billType: 'Insurance Premium',
+        dueDate: '6/24/2022',
+        balanceDue: 3500,
+        accountId: 'MBR12345678',
+        billType: 'Membership Fee',
       },
       {
         id: '3',
@@ -48,10 +53,10 @@ export class InvoicesPageComponent implements OnInit {
       },
       {
         id: '4',
-        dueDate: '6/24/2022',
-        balanceDue: 3500,
-        accountId: 'MBR12345678',
-        billType: 'Membership Dues',
+        dueDate: '6/18/2022',
+        balanceDue: 8300,
+        accountId: 'ACC50012342',
+        billType: 'Insurance Premium',
       },
       {
         id: '5',
@@ -61,13 +66,22 @@ export class InvoicesPageComponent implements OnInit {
         billType: 'Insurance Premium',
       },
       {
-        id: '9',
+        id: '6',
         dueDate: '6/24/2022',
         balanceDue: 1550,
         accountId: 'POLOP-1234562',
         billType: 'Insurance Premium',
       },
+      {
+        id: '7',
+        dueDate: '6/19/2022',
+        balanceDue: 50,
+        accountId: 'MBR12345678',
+        billType: 'Membership Fee',
+      },
     ];
+
+    this.totalInvoices = this.invoiceList.length;
   }
 
   // src: https://stackoverflow.com/a/9685692
@@ -89,5 +103,28 @@ export class InvoicesPageComponent implements OnInit {
     const days = this.countDaysDueFromToday(dueDate);
     if (days < 0) return 'Past Due';
     return days === 0 ? 'Due Today ⏰' : `Due in ${days} day(s)`;
+  }
+
+  totalPages() {
+    return Math.ceil(this.totalInvoices / this.itemsPerPage);
+  }
+
+  public paginatedInvoiceList(): InvoiceListItem[] {
+    return this.invoiceList.slice(
+      (this.currentPage - 1) * this.itemsPerPage,
+      this.currentPage * this.itemsPerPage
+    );
+  }
+
+  public prevPage() {
+    if (this.currentPage > 1) {
+      this.currentPage--;
+    }
+  }
+
+  public nextPage() {
+    if (this.currentPage < this.totalPages()) {
+      this.currentPage++;
+    }
   }
 }
