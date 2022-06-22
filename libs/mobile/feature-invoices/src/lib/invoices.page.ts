@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { map } from 'rxjs';
 
 // TODO: move this to correct place
 export type InvoiceListItem = {
