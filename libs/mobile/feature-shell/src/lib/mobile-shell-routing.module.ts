@@ -3,6 +3,13 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
+    path: 'claims',
+    loadChildren: () =>
+      import('@gfb-nx/mobile/feature-claims').then(
+        (m) => m.ClaimsPageComponentModule
+      ),
+  },
+  {
     path: 'policy',
     loadChildren: () =>
       import('@gfb-nx/mobile/feature-policy').then(

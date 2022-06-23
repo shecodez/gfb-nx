@@ -12,7 +12,7 @@ export class AppComponent implements OnInit {
   activeIndex = -1;
   activePageTitle = '';
   appPages = [
-    { isLabel: true, label: 'Quick Links' },
+    { isLabel: true, label: 'Main Menu' },
     { title: 'Home', icon: 'home', url: '/home' },
     { title: 'Get a Quote', icon: 'chatbubble', url: '/quote' },
     { title: 'Find an Agent', icon: 'person', url: '/contact' },
@@ -29,7 +29,7 @@ export class AppComponent implements OnInit {
     {
       title: 'Claims',
       icon: 'archive',
-      url: '/account/claims',
+      url: '/claims',
       isAuthPage: true,
     },
 
@@ -48,6 +48,8 @@ export class AppComponent implements OnInit {
       url: '/account/policies',
       isAuthPage: true,
     },
+    { isLabel: true, label: '' },
+    { title: 'Logout', icon: 'log-out', url: '/logout', color: 'danger' },
   ];
 
   fab = { title: 'File a Claim', url: '/claims/new' };

@@ -10,8 +10,8 @@
               <ion-label class="text-lg">Sterling Archer</ion-label>
               <ion-note>duchess@notaspy.com</ion-note>
             </div>
-            <ion-button color="danger" fill="clear">
-              <ion-icon name="log-out-outline"></ion-icon>
+            <ion-button fill="clear">
+              <ion-icon name="create-outline"></ion-icon>
             </ion-button>
           </div>
 
@@ -35,8 +35,9 @@
                   slot="start"
                   [ios]="p.icon + '-outline'"
                   [md]="p.icon + '-sharp'"
+                  [color]="p.color"
                 ></ion-icon>
-                <ion-label>{{ p.title }}</ion-label>
+                <ion-label [color]="p.color">{{ p.title }}</ion-label>
               </ion-item>
             </ng-template>
           </ion-menu-toggle>
