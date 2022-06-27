@@ -1,9 +1,9 @@
 <ion-app>
   <ion-split-pane contentId="main-content">
     <!--  the side menu  -->
-    <ion-menu contentId="main-content" type="overlay">
+    <ion-menu contentId="main-content" type="overlay" class="">
       <ion-content>
-        <ion-list id="page-list">
+        <ion-list id="page-list" class="h-full flex flex-col">
           <ion-list-header>[LOGO]</ion-list-header>
           <div class="flex items-center justify-between mt-4">
             <div>
@@ -34,12 +34,18 @@
                 <ion-icon
                   slot="start"
                   [ios]="p.icon + '-outline'"
-                  [md]="p.icon + '-sharp'"
-                  [color]="p.color"
+                  [md]="p.icon"
                 ></ion-icon>
-                <ion-label [color]="p.color">{{ p.title }}</ion-label>
+                <ion-label>{{ p.title }}</ion-label>
               </ion-item>
             </ng-template>
+          </ion-menu-toggle>
+
+          <ion-menu-toggle auto-hide="false" class="mt-auto">
+            <ion-item routerLink="/logout" lines="none" class="logout-item">
+              <ion-icon slot="start" name="log-out" color="danger"></ion-icon>
+              <ion-label color="danger">Log out</ion-label>
+            </ion-item>
           </ion-menu-toggle>
         </ion-list>
       </ion-content>

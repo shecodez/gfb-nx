@@ -16,11 +16,10 @@ export class AppComponent implements OnInit {
     { title: 'Home', icon: 'home', url: '/home' },
     { title: 'Get a Quote', icon: 'chatbubble', url: '/quote' },
     { title: 'Find an Agent', icon: 'person', url: '/contact' },
-    { title: 'Latest News', icon: 'newspaper', url: '/news' },
-    { title: 'Support', icon: 'help-buoy', url: '/support' },
-    { title: 'About Us', icon: 'people', url: 'about' },
+    { title: 'Blog', icon: 'newspaper', url: '/news' },
+    { title: 'About', icon: 'people', url: 'about' },
     { title: 'Products', icon: 'albums', url: '/products' },
-    { title: 'Contact Us', icon: 'paper-plane', url: '/contact' },
+    { title: 'Contact', icon: 'paper-plane', url: '/contact' },
 
     { isLabel: true, label: 'Payments' },
     { title: 'Make a Payment', icon: 'wallet', url: '/account/invoices' },
@@ -33,13 +32,13 @@ export class AppComponent implements OnInit {
       isAuthPage: true,
     },
 
-    { isLabel: true, label: 'Membership' },
-    {
-      title: 'Membership',
-      icon: 'id-card',
-      url: '/account/membership',
-      isAuthPage: true,
-    },
+    // { isLabel: true, label: 'Membership' },
+    // {
+    //   title: 'Membership',
+    //   icon: 'id-card',
+    //   url: '/account/membership',
+    //   isAuthPage: true,
+    // },
 
     { isLabel: true, label: 'Policies' },
     {
@@ -48,8 +47,6 @@ export class AppComponent implements OnInit {
       url: '/account/policies',
       isAuthPage: true,
     },
-    { isLabel: true, label: '' },
-    { title: 'Logout', icon: 'log-out', url: '/logout', color: 'danger' },
   ];
 
   fab = { title: 'File a Claim', url: '/claims/new' };

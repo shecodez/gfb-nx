@@ -18,7 +18,91 @@
 </ion-header>
 
 <ion-content>
-  Policy Information
+  <ion-card class="policy-card">
+    <ion-card-header>
+      <ion-card-title>Policy Information</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-label><b>Member Number:</b> {{ policy.memberNumber}}</ion-label>
+      <ion-label><b>Insured Name:</b> {{ policy.insuredName}}</ion-label>
+      <ion-label>
+        <b>Insured Address:</b> {{ policy.insuredAddress.houseNumber}} {{
+        policy.insuredAddress.line1 }}<br />
+        {{ policy.insuredAddress.city}} {{ policy.insuredAddress.state}}, {{
+        policy.insuredAddress.zipCode }}
+      </ion-label>
+      <ion-label><b>Policy Number:</b> {{ policy.id}}</ion-label>
+      <ion-label>
+        <b>Policy Description:</b> {{ policy.policyDescription}}
+      </ion-label>
+
+      <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button color="primary">
+          <ion-icon name="id-card"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="policy-card">
+    <ion-card-header>
+      <ion-card-title>Premium &amp; Billing Information</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-label>
+        <b>Total Premium:</b> ${{ (policy.totalPremium/100).toFixed(2)}}
+      </ion-label>
+      <ion-label><b>Billing Method:</b> {{ policy.billingMethod }}</ion-label>
+      <ion-label><b>Effective Date:</b> {{ policy.effectiveDate}}</ion-label>
+      <ion-label>
+        <b>Expiration Date:</b> {{ policy.expirationDate}}
+      </ion-label>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="policy-card">
+    <ion-card-header>
+      <ion-card-title>Drivers</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <div *ngFor="let driver of policy.drivers">
+        <b>{{ driver.name }}</b>
+        <ul *ngIf="driver.discounts?.length" class="ml-4">
+          <li *ngFor="let discount of driver.discounts">{{ discount }}</li>
+        </ul>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="policy-card">
+    <ion-card-header>
+      <ion-card-title>Coverages</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content> list </ion-card-content>
+  </ion-card>
+
+  <ion-card class="policy-card">
+    <ion-card-header>
+      <ion-card-title>Additional Coverages</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content> list </ion-card-content>
+  </ion-card>
+
+  <ion-card class="policy-card">
+    <ion-card-header>
+      <ion-card-title>Agent</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-label class="font-bold"> {{ policy.agent.name }}</ion-label>
+      <ion-label color="primary"> {{ policy.agent.county}} County</ion-label>
+    </ion-card-content>
+  </ion-card>
 
   <ion-fab vertical="bottom" horizontal="end" slot="fixed" class="ion-padding">
     <ion-fab-button color="primary">
