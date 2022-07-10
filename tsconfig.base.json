@@ -27,9 +27,15 @@
       "@gfb-nx/mobile/feature-claims": [
         "libs/mobile/feature-claims/src/index.ts"
       ],
+      "@gfb-nx/mobile/feature-document-library": [
+        "libs/mobile/feature-document-library/src/index.ts"
+      ],
       "@gfb-nx/mobile/feature-home": ["libs/mobile/feature-home/src/index.ts"],
       "@gfb-nx/mobile/feature-invoices": [
         "libs/mobile/feature-invoices/src/index.ts"
+      ],
+      "@gfb-nx/mobile/feature-membership": [
+        "libs/mobile/feature-membership/src/index.ts"
       ],
       "@gfb-nx/mobile/feature-policies": [
         "libs/mobile/feature-policies/src/index.ts"

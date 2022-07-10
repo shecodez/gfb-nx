@@ -10,6 +10,18 @@ const routes: Routes = [
     // TODO: replace register with payments page
     children: [
       {
+        path: 'membership',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('@gfb-nx/mobile/feature-membership').then(
+                (m) => m.MembershipPageComponentModule
+              ),
+          },
+        ],
+      },
+      {
         path: 'policies',
         children: [
           {
@@ -22,7 +34,7 @@ const routes: Routes = [
         ],
       },
       {
-        path: 'invoices',
+        path: 'payments',
         children: [
           {
             path: '',

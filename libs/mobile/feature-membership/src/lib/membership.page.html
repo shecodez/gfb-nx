@@ -1,0 +1,53 @@
+<ion-content>
+  <div
+    *ngIf="memberships.length else noResults"
+    class="h-full flex flex-col items-center justify-center"
+  >
+    <ion-card
+      *ngFor="let membership of memberships"
+      class="w-11/12 md:w-3/5 lg:w-2/3"
+    >
+      <ion-card-header>
+        <ion-card-subtitle class="text-center">
+          Joined: {{ membership.joinYear }}
+        </ion-card-subtitle>
+        <ion-card-title class="text-center">
+          Thanks for x years of membership!
+        </ion-card-title>
+      </ion-card-header>
+      <ion-item lines="none">
+        <ion-card-content class="w-full">
+          <div class="flex items-center justify-between">
+            <ion-note>Expires: {{ membership.expirationDate }}</ion-note>
+
+            <ion-chip
+              [color]="getMembershipStatusIcon(membership.status).color"
+            >
+              <ion-label>{{membership.status}}</ion-label>
+            </ion-chip>
+          </div>
+
+          <h3>{{membership.id}}</h3>
+
+          <h2 class="text-4xl">{{membership.memberName}}</h2>
+
+          <ion-label color="primary">
+            {{membership.countyName}} County
+          </ion-label>
+
+          <ion-fab vertical="bottom" horizontal="end" class="ion-padding">
+            <ion-fab-button color="primary">
+              <ion-icon name="id-card"></ion-icon>
+            </ion-fab-button>
+          </ion-fab>
+        </ion-card-content>
+      </ion-item>
+    </ion-card>
+  </div>
+
+  <ng-template #noResults>
+    <ion-card>
+      <ion-card-title class="ion-padding">No results.</ion-card-title>
+    </ion-card>
+  </ng-template>
+</ion-content>
