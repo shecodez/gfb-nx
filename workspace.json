@@ -5,6 +5,7 @@
     "insurance-mobile-e2e": "apps/insurance-mobile-e2e",
     "mobile-auth-feature-login": "libs/mobile/auth/feature-login",
     "mobile-auth-feature-register": "libs/mobile/auth/feature-register",
+    "mobile-claim-form": "libs/mobile/claim-form",
     "mobile-feature-account": "libs/mobile/feature-account",
     "mobile-feature-claims": "libs/mobile/feature-claims",
     "mobile-feature-document-library": "libs/mobile/feature-document-library",

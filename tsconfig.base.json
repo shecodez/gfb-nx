@@ -21,6 +21,7 @@
       "@gfb-nx/mobile/auth/feature-register": [
         "libs/mobile/auth/feature-register/src/index.ts"
       ],
+      "@gfb-nx/mobile/claim-form": ["libs/mobile/claim-form/src/index.ts"],
       "@gfb-nx/mobile/feature-account": [
         "libs/mobile/feature-account/src/index.ts"
       ],

@@ -1,0 +1,180 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>New Claim</ion-title>
+    <ion-buttons slot="end" class="pr-4">
+      <ion-button>
+        <ion-icon slot="icon-only" name="person-circle"></ion-icon>
+      </ion-button>
+      <ion-button
+        color="warning"
+        shape="round"
+        fill="outline"
+        class="hidden md:block"
+      >
+        <ion-icon slot="start" name="timer-outline"></ion-icon>
+        15:00&nbsp;
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Loss: Property Claim</ion-card-subtitle>
+      <ion-card-title>Type</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item>
+        <ion-item>
+          <ion-label>Loss Date: </ion-label>
+          <ion-datetime
+            displayFormat="D MMM YYYY H:mm"
+            min="2020"
+            max="2022"
+            value="2022-07-15T11:06Z"
+          ></ion-datetime>
+        </ion-item>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Loss Type</ion-label>
+        <ion-select>
+          <ion-select-option value="1">Loss 1</ion-select-option>
+          <ion-select-option value="2">Loss 2</ion-select-option>
+          <ion-select-option value="3">Loss 3</ion-select-option>
+          <ion-select-option value="4">Loss 4</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-item>
+              <ion-label position="floating">First Name</ion-label>
+              <ion-input
+                type="text"
+                formControlName="firstName"
+                placeholder="First Name"
+              ></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+              <ion-label position="floating">Last Name</ion-label>
+              <ion-input
+                type="text"
+                formControlName="lastName"
+                placeholder="Last Name"
+              ></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Location</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item>
+        <ion-label>Location</ion-label>
+        <ion-select>
+          <ion-select-option value="1">Location 1</ion-select-option>
+          <ion-select-option value="2">Location 2</ion-select-option>
+          <ion-select-option value="3">Location 3</ion-select-option>
+          <ion-select-option value="4">Location 4</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Details</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-label>Farm Equipment?</ion-label>
+          <ion-toggle slot="start" name="blueberry" checked></ion-toggle>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Injuries?</ion-label>
+          <ion-toggle
+            slot="start"
+            name="apple"
+            color="secondary"
+            checked
+          ></ion-toggle>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Property Damage?</ion-label>
+          <ion-toggle
+            slot="start"
+            name="grape"
+            color="tertiary"
+            checked
+          ></ion-toggle>
+        </ion-item>
+      </ion-list>
+      <ion-item>
+        <ion-textarea
+          placeholder="Enter more information here..."
+        ></ion-textarea>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Uploads</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item class="border border-dashed rounded py-6">
+        <ion-icon slot="start" name="cloud-upload"></ion-icon>
+        <ion-input placeholder="Drag and drop files here"></ion-input>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Contact</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="floating">Phone Number</ion-label>
+        <ion-input
+          type="tel"
+          formControlName="telephone"
+          placeholder="123 456-7890"
+        ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">E-Mail</ion-label>
+        <ion-input
+          type="email"
+          formControlName="email"
+          placeholder="your@email.com"
+        ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox color="primary" slot="start"></ion-checkbox>
+        <ion-label> You agree to the the terms... </ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -7,6 +7,20 @@ const routes: Routes = [
   {
     path: '',
     component: ClaimsPageComponent,
+    children: [
+      {
+        path: 'new',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('@gfb-nx/mobile/claim-form').then(
+                (m) => m.ClaimFormPageComponentModule
+              ),
+          },
+        ],
+      },
+    ],
   },
 ];
 
