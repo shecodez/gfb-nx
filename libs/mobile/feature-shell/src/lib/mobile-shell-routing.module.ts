@@ -3,22 +3,29 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'new-claim',
+    path: 'claim',
     loadChildren: () =>
-      import('@gfb-nx/mobile/claim-form').then(
+      import('@gfb-nx/mobile/claim/feature-claim').then(
+        (m) => m.ClaimPageComponentModule
+      ),
+  },
+  {
+    path: 'claim/:id',
+    loadChildren: () =>
+      import('@gfb-nx/mobile/claim/ui-claim-details').then(
+        (m) => m.ClaimDetailsPageComponentModule
+      ),
+  },
+  {
+    path: 'file-a-claim',
+    loadChildren: () =>
+      import('@gfb-nx/mobile/claim/feature-claim-form').then(
         (m) => m.ClaimFormPageComponentModule
       ),
   },
 
   {
-    path: 'claims',
-    loadChildren: () =>
-      import('@gfb-nx/mobile/feature-claims').then(
-        (m) => m.ClaimsPageComponentModule
-      ),
-  },
-  {
-    path: 'policy',
+    path: 'policy/:id',
     loadChildren: () =>
       import('@gfb-nx/mobile/feature-policy').then(
         (m) => m.PolicyPageComponentModule

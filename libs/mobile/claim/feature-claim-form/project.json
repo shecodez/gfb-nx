@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/mobile/claim/feature-claim-form",
+  "sourceRoot": "libs/mobile/claim/feature-claim-form/src",
+  "prefix": "gfb-nx",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/mobile/claim/feature-claim-form"],
+      "options": {
+        "jestConfig": "libs/mobile/claim/feature-claim-form/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/mobile/claim/feature-claim-form/src/**/*.ts",
+          "libs/mobile/claim/feature-claim-form/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

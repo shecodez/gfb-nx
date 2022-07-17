@@ -26,14 +26,13 @@ export class AppComponent implements OnInit {
     {
       title: 'Claims',
       icon: 'archive',
-      url: '/claims',
+      url: '/claim',
       isAuthPage: true,
     },
     {
       title: 'File a Claim',
       icon: 'create',
-      url: '/new-claim',
-      isAuthPage: true,
+      url: '/file-a-claim',
     },
 
     { isLabel: true, label: 'Account' },
@@ -49,7 +48,7 @@ export class AppComponent implements OnInit {
       url: '/account/policies',
       isAuthPage: true,
     },
-    { title: 'Make a Payment', icon: 'card', url: '/account/payments' },
+    { title: 'Invoices', icon: 'card', url: '/account/invoices' },
 
     { isLabel: true, label: 'Documents' },
     {

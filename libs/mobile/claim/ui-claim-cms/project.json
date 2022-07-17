@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/mobile/claim/ui-claim-cms",
+  "sourceRoot": "libs/mobile/claim/ui-claim-cms/src",
+  "prefix": "gfb-nx",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/mobile/claim/ui-claim-cms"],
+      "options": {
+        "jestConfig": "libs/mobile/claim/ui-claim-cms/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/mobile/claim/ui-claim-cms/src/**/*.ts",
+          "libs/mobile/claim/ui-claim-cms/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

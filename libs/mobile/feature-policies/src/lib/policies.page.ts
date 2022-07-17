@@ -61,6 +61,6 @@ export class PoliciesPageComponent implements OnInit {
   }
 
   public viewPolicy() {
-    this.router.navigate(['policy']);
+    this.router.navigate(['policy/ABC12345678']);
   }
 }

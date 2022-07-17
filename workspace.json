@@ -5,15 +5,19 @@
     "insurance-mobile-e2e": "apps/insurance-mobile-e2e",
     "mobile-auth-feature-login": "libs/mobile/auth/feature-login",
     "mobile-auth-feature-register": "libs/mobile/auth/feature-register",
-    "mobile-claim-form": "libs/mobile/claim-form",
+    "mobile-claim-feature-claim": "libs/mobile/claim/feature-claim",
+    "mobile-claim-feature-claim-form": "libs/mobile/claim/feature-claim-form",
+    "mobile-claim-ui-claim-cms": "libs/mobile/claim/ui-claim-cms",
+    "mobile-claim-ui-claim-details": "libs/mobile/claim/ui-claim-details",
+    "mobile-claim-ui-claim-list": "libs/mobile/claim/ui-claim-list",
     "mobile-feature-account": "libs/mobile/feature-account",
-    "mobile-feature-claims": "libs/mobile/feature-claims",
     "mobile-feature-document-library": "libs/mobile/feature-document-library",
     "mobile-feature-home": "libs/mobile/feature-home",
     "mobile-feature-invoices": "libs/mobile/feature-invoices",
     "mobile-feature-membership": "libs/mobile/feature-membership",
     "mobile-feature-policies": "libs/mobile/feature-policies",
     "mobile-feature-policy": "libs/mobile/feature-policy",
-    "mobile-feature-shell": "libs/mobile/feature-shell"
+    "mobile-feature-shell": "libs/mobile/feature-shell",
+    "mobile-shared-data-access-auth": "libs/mobile/shared/data-access-auth"
   }
 }

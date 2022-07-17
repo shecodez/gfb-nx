@@ -34,7 +34,7 @@ const routes: Routes = [
         ],
       },
       {
-        path: 'payments',
+        path: 'invoices',
         children: [
           {
             path: '',

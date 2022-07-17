@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-menu-button autoHide="false"></ion-menu-button>
     </ion-buttons>
-    <ion-title>Account</ion-title>
+    <ion-title>Claims</ion-title>
     <ion-buttons slot="end" class="pr-4">
       <ion-button>
         <ion-icon slot="icon-only" name="person-circle"></ion-icon>
@@ -24,26 +24,14 @@
 <ion-content>
   <ion-tabs>
     <ion-tab-bar>
-      <ion-tab-button tab="membership">
-        <ion-icon name="person-circle"></ion-icon>
-        <ion-label>Membership</ion-label>
-      </ion-tab-button>
-      <ion-tab-button tab="policies">
+      <ion-tab-button tab="list">
         <ion-icon name="list"></ion-icon>
-        <ion-label>Policies</ion-label>
+        <ion-label>Claims</ion-label>
       </ion-tab-button>
-      <ion-tab-button tab="invoices">
-        <ion-icon name="receipt"></ion-icon>
-        <ion-label>Invoices</ion-label>
-        <ion-badge>7</ion-badge>
+      <ion-tab-button tab="file">
+        <ion-icon name="information-circle"></ion-icon>
+        <ion-label>Info</ion-label>
       </ion-tab-button>
     </ion-tab-bar>
   </ion-tabs>
-
-  <ion-fab vertical="bottom" horizontal="end" slot="fixed" class="ion-padding">
-    <ion-fab-button color="primary" routerLink="/claims">
-      <ion-icon name="create"></ion-icon>
-      <span class="sr-only">File A Claim</span>
-    </ion-fab-button>
-  </ion-fab>
 </ion-content>
